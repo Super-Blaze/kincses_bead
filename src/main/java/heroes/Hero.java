@@ -51,7 +51,16 @@ public class Hero {
         this.armyPopulation = 0;
         this.player = player;
         
-        farmers = new Army()
+        farmers = new Army(player,"Farmer");
+        archers = new Army(player, "Archer");
+        griffs = new Army(player, "Griffs");
+        mages = new Army(player,"Mage");
+        warriors = new Army(player, "Warrior");
+
+    }
+
+    public String displayUnits(){
+        return String.valueOf(farmers) + archers + griffs + mages + warriors;
     }
 
     public void addUnitToPopulation(){

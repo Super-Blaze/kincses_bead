@@ -1,4 +1,5 @@
 
+import heroes.HeroCreator;
 import players.Player;
 
 import java.util.Scanner;

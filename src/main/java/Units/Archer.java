@@ -14,7 +14,7 @@ public class Archer extends Unit {
         this.initiative = 9;
     }
 
-    public int shot() {
+    public int shoot() {
         return 0;
     }
 

@@ -70,9 +70,7 @@ public class ArmyCreator {
     public void checkUserInput(int selectedValue) {
         if (selectedValue == 99) {
             System.out.println("You have the following units:\n");
-            for(Unit u : this.player.getHero().getUnits()) {
-                System.out.println("- " + u.getName());
-            }
+            System.out.println(player.getHero().displayUnits());
         }
         else if(goldChecker(selectedValue)) {
             addUnitForPlayer(selectedValue);

@@ -3,17 +3,20 @@ package Units;
 import AbstractClasses.Unit;
 import players.Player;
 
+import java.util.LinkedList;
 import java.util.List;
+import java.util.Queue;
 
 public class Army {
     private Player player;
-    private List<Unit> units;
+    private Queue<Unit> units;
     private String type;
 
-    public Army(Player player, List<Unit> units,String type) {
+    public Army(Player player,String type) {
         this.player = player;
-        this.units = units;
         this.type = type;
+
+        units = new LinkedList<>();
     }
 
     public Player getPlayer() {
@@ -24,7 +27,7 @@ public class Army {
         this.player = player;
     }
 
-    public List<Unit> getUnits() {
+    public Queue<Unit> getUnits() {
         return units;
     }
 
@@ -35,7 +38,10 @@ public class Army {
     @Override
     public String toString() {
         StringBuilder sB = new StringBuilder();
-        sB.append()
+        sB.append(type).append(": ");
+        for (Unit unit : units){
+            sB.append(unit).append(" ");
+        }
         return sB.toString();
     }
 }

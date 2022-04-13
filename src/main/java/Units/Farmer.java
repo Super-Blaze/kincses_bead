@@ -5,6 +5,7 @@ import AbstractClasses.Unit;
 public class Farmer extends Unit {
 
     public Farmer() {
+        super();
         this.name = "Farmer";
         this.price = 2;
         this.minDamage = 1;
